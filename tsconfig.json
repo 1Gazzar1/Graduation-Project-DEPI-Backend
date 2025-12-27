@@ -5,7 +5,7 @@
     "outDir": "./dist",
 
     "paths": {
-      "@/*": ["*"] // @ now points to src root
+      "@/*": ["./*"]
     },
 
     "target": "esnext",
