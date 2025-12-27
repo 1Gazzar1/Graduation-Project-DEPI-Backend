@@ -17,10 +17,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch ./src",
-    "start": "tsx && node ./src/index.js",
-    "build": "tsc",
-    "migrate": "drizzle-kit migrate",
-    "generate": "drizzle-kit generate"
+    "start": "node ./dist/index.js",
+    "build": "tsc && tsc-alias",
+    "build:st": "npm run build && npm run start"
   },
   "keywords": [],
   "dependencies": {
@@ -33,6 +32,7 @@
     "@types/express": "^5.0.5",
     "@types/node": "^24.9.1",
     "drizzle-kit": "^0.31.6",
+    "tsc-alias": "^1.8.16",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }

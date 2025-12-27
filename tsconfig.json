@@ -1,15 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "esnext",
-    "module": "esnext",
+    "baseUrl": "./src",
     "rootDir": "./src",
     "outDir": "./dist",
+
+    "paths": {
+      "@/*": ["*"] // @ now points to src root
+    },
+
+    "target": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
     "strict": true,
-    "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "isolatedModules": true
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
